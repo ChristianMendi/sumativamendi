@@ -1,0 +1,62 @@
+.btn-primario {
+    all: unset;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0.6em 2em;
+    border: rgb(0, 200, 250) solid 0.15em;
+    border-radius: 0.25em;
+    color: rgb(0, 200, 250);
+    font-size: 1.5em;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    transition: border 300ms, color 300ms;
+    user-select: none;
+  }
+  
+  .btn-primario p {
+    z-index: 1;
+  }
+  
+  .btn-primario:hover {
+    color: #212121;
+  }
+  
+  .btn-primario:active {
+    border-color: rgb(0, 70, 128);
+  }
+  
+  .btn-primario::after, .btn-primario::before {
+    content: "";
+    position: absolute;
+    width: 9em;
+    aspect-ratio: 1;
+    background: rgb(0, 200, 250);
+    opacity: 50%;
+    border-radius: 50%;
+    transition: transform 500ms, background 300ms;
+  }
+  
+  .btn-primario::before {
+    left: 0;
+    transform: translateX(-8em);
+  }
+  
+  .btn-primario::after {
+    right: 0;
+    transform: translateX(8em);
+  }
+  
+  .btn-primario:hover:before {
+    transform: translateX(-1em);
+  }
+  
+  .btn-primario:hover:after {
+    transform: translateX(1em);
+  }
+  
+  .btn-primario:active:before,
+  .btn-primario:active:after {
+    background: rgb(0, 70, 128);
+  }

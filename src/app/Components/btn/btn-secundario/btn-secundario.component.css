@@ -1,0 +1,62 @@
+.btn-secundario {
+  all: unset;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.6em 2em;
+  border: rgb(117, 0, 250) solid 0.15em;
+  border-radius: 0.25em;
+  color: rgb(117, 0, 250);
+  font-size: 1.5em;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border 300ms, color 300ms;
+  user-select: none;
+}
+
+.btn-secundario p {
+  z-index: 1;
+}
+
+.btn-secundario:hover {
+  color: #212121;
+}
+
+.btn-secundario:active {
+  border-color: rgb(117, 0, 128);
+}
+
+.btn-secundario::after, .btn-secundario::before {
+  content: "";
+  position: absolute;
+  width: 9em;
+  aspect-ratio: 1;
+  background: rgb(117, 0, 250);
+  opacity: 50%;
+  border-radius: 50%;
+  transition: transform 500ms, background 300ms;
+}
+
+.btn-secundario::before {
+  left: 0;
+  transform: translateX(-8em);
+}
+
+.btn-secundario::after {
+  right: 0;
+  transform: translateX(8em);
+}
+
+.btn-secundario:hover:before {
+  transform: translateX(-1em);
+}
+
+.btn-secundario:hover:after {
+  transform: translateX(1em);
+}
+
+.btn-secundario:active:before,
+.btn-secundario:active:after {
+  background: rgb(117, 0, 128);
+}

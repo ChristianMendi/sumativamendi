@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+.header{
+    font-family: "Sour Gummy", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  background-color: #3C3030;
+  height: 50px;
+  border-radius: 15px;
+  text-align: center;
+
+}
+
+
+
+
+  
